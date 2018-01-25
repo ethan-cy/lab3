@@ -13,10 +13,12 @@ function initializePage() {
 		$('.jumbotron h1').text("Javascript has taken control");
 		$("#testjs").text("Please wait...");
 		$(".jumbotron p").addClass("active");
+
 	});
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+	$('.project').click(projectClick);
 }
 
 
@@ -29,7 +31,6 @@ function projectClick(e) { 
     if (description.length == 0) {
        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
-       description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+       $("#description").fadeOut();
     }
-}
 }
